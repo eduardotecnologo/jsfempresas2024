@@ -29,9 +29,17 @@ public class Empresas {
 		return query.getResultList();
 	}
 	
-	public Empresa guardar (Empresa empresa){
-		return manager.merge(empresa);
-	}
+    public void guardar(Empresa empresa) {
+        if (empresa.getId() == null) {
+            manager.persist(empresa);
+        } else {
+            manager.merge(empresa);
+        }
+    }
+	
+	//public Empresa guardar (Empresa empresa){
+    //		return manager.merge(empresa);
+	//}
 	
 	public void remover (Empresa empresa){
 		empresa = porId(empresa.getId());
