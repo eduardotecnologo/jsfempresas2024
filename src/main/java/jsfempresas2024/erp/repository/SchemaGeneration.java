@@ -13,7 +13,7 @@ public class SchemaGeneration {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("EdudeveloperPU");
 
         EntityManager em = emf.createEntityManager();
-
+ 
         List<Empresa> lista = em.createQuery("from Empresa", Empresa.class).getResultList();
 
         System.out.println(lista);

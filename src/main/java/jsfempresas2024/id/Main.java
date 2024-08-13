@@ -5,7 +5,6 @@ public class Main {
 		Pedidos pedidos = new Pedidos();
 		
 		RelatorioService relatorioService = new RelatorioService();
-		relatorioService.setPedidos(pedidos);
+		//relatorioService.setPedidos(pedidos);
 	}
-
 }
