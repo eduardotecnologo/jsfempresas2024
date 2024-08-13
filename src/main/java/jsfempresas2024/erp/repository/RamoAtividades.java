@@ -2,6 +2,8 @@ package jsfempresas2024.erp.repository;
 
 import javax.persistence.criteria.Root;
 import java.util.List;
+
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -11,6 +13,7 @@ import jsfempresas2024.erp.model.RamoAtividade;
 
 public class RamoAtividades {
 
+	@Inject
 	private EntityManager manager;
 	
 	public RamoAtividades() {
