@@ -81,10 +81,13 @@
 					<p:commandButton value="Salvar" 
 									 actionListener="#{gestaoEmpresasBean.salvar}" 
 									 update="@form"/>
-					
 					<p:outputLabel />
-					<p:commandLink value="Ajuda?" action="#{gestaoEmpresasBean.ajuda}"/>			
+					
+
+					<p:commandLink value="Ajuda?" action="#{gestaoEmpresasBean.ajuda}"/>	
+		
   			</h:panelGrid>
+  			
   			<!-- Lista informações para o usuário -->
 			<p:dataTable>
 				<p:column headerText="Razão Social">
