@@ -70,16 +70,16 @@
 				<h:message for="cnpj"/>
 			</h:panelGroup>
 			
-			<p:outputLabel value="Incrição Estadual" for="inscricao_estadual"/>
-			
+			<p:outputLabel value="Inscrição Estadual" for="inscricao_estadual"/>
 			<h:panelGroup>
-				<p:inputText id="inscricao_estadual" 
-					value="#{gestaoEmpresasBean.empresa.inscricao_estadual}" 
-					required="true"
-					label="Incrição Estadual">
-					<f:validateLength minimum="8" maximum="14"/>
-				</p:inputText>
-				<h:message for="inscricao_estadual"/>
+			    <p:inputText id="inscricao_estadual" 
+			        value="#{gestaoEmpresasBean.empresa.inscricao_estadual}" 
+			        required="true"
+			        label="Inscrição Estadual">
+			        <f:validateLength minimum="8" maximum="14"/>
+			        <f:validator validatorId="inscricaoEstadualValidator"/>
+			    </p:inputText>
+			    <h:message for="inscricao_estadual"/>
 			</h:panelGroup>
 			
 			<p:outputLabel value="Data de Fundação" for="dataFundacao"/>

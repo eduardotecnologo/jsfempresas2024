@@ -17,6 +17,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import jsfempresas2024.erp.validators.ValidInscricaoEstadual;
+
 @Entity
 @Table(name = "empresa")
 public class Empresa implements Serializable{
@@ -35,6 +37,7 @@ public class Empresa implements Serializable{
 	@Column(nullable = false, length = 18)
 	private String cnpj;
 	
+	@ValidInscricaoEstadual
 	@Column(nullable = false,length = 14)
 	private String inscricao_estadual;
 	
