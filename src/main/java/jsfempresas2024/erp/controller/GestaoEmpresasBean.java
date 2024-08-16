@@ -6,6 +6,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 import jsfempresas2024.erp.model.Empresa;
+import jsfempresas2024.erp.model.EstadoBrasil;
 import jsfempresas2024.erp.model.TipoEmpresa;
 
 @Named
@@ -19,7 +20,8 @@ public class GestaoEmpresasBean implements Serializable{
 	public void salvar() {
 		System.out.println("Razão social: " + empresa.getRazaoSocial()
 				+ " - " + empresa.getNomeFantasia()
-				+ " - " + empresa.getTipo());
+				+ " - " + empresa.getTipo()
+				+ " - " + empresa.getEstados());
 	}
 
 	public String ajuda() {
@@ -33,4 +35,8 @@ public class GestaoEmpresasBean implements Serializable{
 	public TipoEmpresa[] getTiposEmpresa() {
 		return TipoEmpresa.values();
 	}
+	
+	public EstadoBrasil[] getEstadoBrasil() {
+		return EstadoBrasil.values()
+;	}
 }

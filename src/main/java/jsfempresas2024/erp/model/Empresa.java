@@ -35,6 +35,9 @@ public class Empresa implements Serializable{
 	@Column(nullable = false, length = 18)
 	private String cnpj;
 	
+	@Column(nullable = false,length = 14)
+	private String inscricao_estadual;
+	
 	@Temporal(TemporalType.DATE)
 	@Column(name = "data_fundacao")
 	private Date dataFundacao;
@@ -47,10 +50,22 @@ public class Empresa implements Serializable{
 	@Column(nullable = false, length = 30)
 	private TipoEmpresa tipo;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false, length = 50)
+	private EstadoBrasil estados;
+	
 	@Column(precision = 10, scale = 2)
     private BigDecimal faturamento;
+	
+    public String getInscricao_estadual() {
+		return inscricao_estadual;
+	}
 
-    public BigDecimal getFaturamento() {
+	public void setInscricao_estadual(String inscricao_estadual) {
+		this.inscricao_estadual = inscricao_estadual;
+	}
+
+	public BigDecimal getFaturamento() {
     	return faturamento;
     }
     
@@ -112,6 +127,15 @@ public class Empresa implements Serializable{
 
 	public void setTipo(TipoEmpresa tipo) {
 		this.tipo = tipo;
+	}
+	
+
+	public EstadoBrasil getEstados() {
+		return estados;
+	}
+
+	public void setEstados(EstadoBrasil estados) {
+		this.estados = estados;
 	}
 
 	@Override
